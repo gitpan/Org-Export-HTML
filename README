@@ -2,7 +2,7 @@ NAME
     Org::Export::HTML - Export Org document to HTML
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
      use Org::Export::HTML qw(export_org_to_html);
@@ -22,6 +22,8 @@ DESCRIPTION
 
     This module uses Log::Any logging framework.
 
+    This module's functions have Sub::Spec specs.
+
 FUNCTIONS
     None is exported by default, but they can be.
 
@@ -33,6 +35,10 @@ FUNCTIONS
     error message, RESULT is the actual result.
 
     Arguments ("*" denotes required arguments):
+
+    *   css_url => *str*
+
+        Add a link to CSS document.
 
     *   exclude_tags => *array*
 
@@ -55,6 +61,10 @@ FUNCTIONS
         tags will be excluded. If a selected tree is a subtree, the heading
         hierarchy above it will also be selected for export, but not the
         text below those headings.
+
+    *   naked => *bool*
+
+        Don't wrap exported HTML with HTML/HEAD/BODY elements.
 
     *   source_file => *str*
 

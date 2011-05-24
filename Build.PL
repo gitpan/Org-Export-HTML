@@ -17,15 +17,18 @@ my %module_build_args = (
     'Steven Haryanto <stevenharyanto@gmail.com>'
   ],
   'dist_name' => 'Org-Export-HTML',
-  'dist_version' => '0.01',
+  'dist_version' => '0.02',
   'license' => 'perl',
   'module_name' => 'Org::Export::HTML',
   'recommends' => {},
   'recursive_test_files' => 1,
   'requires' => {
-    'Org::Parser' => '0.07',
+    'File::Slurp' => '0',
+    'HTML::Entities' => '0',
+    'Org::Parser' => '0.11',
     'String::Escape' => '0',
     'Sub::Spec::CmdLine' => '0',
+    'Test::Differences' => '0',
     'Test::More' => '0.96',
     'perl' => '5.010000'
   },
